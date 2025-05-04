@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azarr Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Azarr Official</div>
+    <nav>
+      <a href="#services">Layanan</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="logo.png" alt="Azarr Logo" class="hero-img" />
+    <div class="hero-text">
+      <h1>Azarr Store</h1>
+      <p>Mau cari jasa atau produk digital dengan harga murah, cepat, dan berkualitas? Azarr Store solusinya!</p>
+      <a href="#services" class="btn">Lihat Layanan</a>
+    </div>
+  </section>
+
+<section id="services" class="services">
+  <h2>Produk Digital</h2>
+<div class="cards page" id="page1">
+  <div class="card">Produk Digital 1 <a class="btn" href="https://wa.me/6285137073500?text=Halo,%20saya%20ingin%20membeli%20Produk%20Digital%201" target="_blank">Beli Sekarang</a></div>
+  <div class="card">Produk Digital 2 <a class="btn" href="https://wa.me/6285137073500?text=Halo,%20saya%20ingin%20membeli%20Produk%20Digital%202" target="_blank">Beli Sekarang</a></div>
+  ...
+  <div class="card">Produk Digital 10 <a class="btn" href="https://wa.me/6285137073500?text=Halo,%20saya%20ingin%20membeli%20Produk%20Digital%2010" target="_blank">Beli Sekarang</a></div>
+</div>
+
+<div class="cards page" id="page2" style="display:none;">
+  <div class="card">Produk Digital 11 <a class="btn" href="https://wa.me/6285137073500?text=Halo,%20saya%20ingin%20membeli%20Produk%20Digital%2011" target="_blank">Beli Sekarang</a></div>
+  ...
+  <div class="card">Produk Digital 20 <a class="btn" href="https://wa.me/6285137073500?text=Halo,%20saya%20ingin%20membeli%20Produk%20Digital%2020" target="_blank">Beli Sekarang</a></div>
+</div>
+
+<div class="cards page" id="page3" style="display:none;">
+  <div class="card">Produk Digital 21 <a class="btn" href="https://wa.me/6285137073500?text=Halo,%20saya%20ingin%20membeli%20Produk%20Digital%2021" target="_blank">Beli Sekarang</a></div>
+  ...
+  <div class="card">Produk Digital 25 <a class="btn" href="https://wa.me/6285137073500?text=Halo,%20saya%20ingin%20membeli%20Produk%20Digital%2025" target="_blank">Beli Sekarang</a></div>
+</div>
+
+<div class="pagination">
+  <button onclick="showPage(1)">1</button>
+  <button onclick="showPage(2)">2</button>
+  <button onclick="showPage(3)">3</button>
+</div>
+</section>
+
+  <section id="contact" class="contact">
+    <h2>Kontak</h2>
+    <div class="icons">
+      <a href="https://www.instagram.com/azarrofficial?igsh=aGl0NjUxdnhpMzhy" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@azarr_editz?si=IgmPSjEY5HVqr9cO" target="_blank">YouTube</a>
+      <a href="https://wa.me/6285137073500" target="_blank">WhatsApp</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+  <script>
+  function showPage(page) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach((p, i) => {
+      p.style.display = (i === page - 1) ? 'flex' : 'none';
+    });
+  }
+  </script>
+</html>
